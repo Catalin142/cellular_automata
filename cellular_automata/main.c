@@ -6,11 +6,9 @@
 const uint32_t WHITE = 0xffffff;
 const uint32_t BLACK = 0x000000;
 
-//#define MAP_GENERATION
-//#define CELLULAR_AUTOMATA 
-#define BELOUSOV_ZHABOTINSKY
-
-#include <time.h>
+#define MAP_GENERATION
+//#define GAME_OF_LIFE 
+//#define BELOUSOV_ZHABOTINSKY
 
 void get_mouse_position(uint32_t* x, uint32_t* y, window* wnd, graphics_context* ctx)
 {
@@ -38,7 +36,7 @@ int main()
 #ifdef MAP_GENERATION
     map_generation_application* app = create_map_generation_application(window_width / pixel_size, window_height / pixel_size, 60);
 #endif
-#ifdef CELLULAR_AUTOMATA
+#ifdef GAME_OF_LIFE
     game_of_life_application* app = create_game_of_life_application(window_width / pixel_size, window_height / pixel_size);
 #endif
 #ifdef BELOUSOV_ZHABOTINSKY
@@ -53,7 +51,7 @@ int main()
             memcpy(ctx->memory_buffer, app->map_buffer, app->map_width * app->map_height * sizeof(uint32_t));
 #endif
 
-#ifdef CELLULAR_AUTOMATA
+#ifdef GAME_OF_LIFE
         if (GetKeyState(VK_LBUTTON) < 0)
         {
             uint32_t x, y;
@@ -79,7 +77,7 @@ int main()
     delete_map_generation_application(app);
 #endif
 
-#ifdef CELLULAR_AUTOMATA
+#ifdef GAME_OF_LIFE
     delete_game_of_life_application(app);
 #endif
 
