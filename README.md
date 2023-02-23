@@ -1,12 +1,11 @@
 # cellular_automata
 A project where I experiment with various cellular automata algorithms.
 
-* map generation
-<br>
+* map generation<br>
 ![mg](img/map_generation.png)
-* game of life
+* game of life<br>
 <br>
 ![gol](img/game_of_life.png)
-* belousov zhabotinsky
+* belousov zhabotinsky<br>
 <br>
 ![bz](img/belousov_zhabotinsky.png)
