@@ -2,6 +2,8 @@
 A project where I experiment with various cellular automata algorithms.
 
 * map generation
+&nbsp;
+&nbsp;
 ![mg](img/map_generation.png)
 * game of life
 ![gol](img/game_of_life.png)
